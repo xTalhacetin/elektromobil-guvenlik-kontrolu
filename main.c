@@ -22,5 +22,19 @@ int main(void)
     printf("Fren Pedalı (1:Basılı, 0:Değil): ");
     scanf("%d", &fren_pedali);
 
+
+        printf("\n");
+
+    if (batarya_sicakligi > 60.0f) {
+        printf("SONUÇ: KRİTİK HATA: Motor Aşırı Isındı! Sürüş Engellendi.\n");
+    } else if (sarj_yuzdesi < 10) {
+        printf("SONUÇ: UYARI: Batarya Kritik Seviyede! Sürüş Başlatılamaz.\n");
+    } else if (kapi_durumu == 'A') {
+        printf("SONUÇ: HATA: Kapılar Açık! Lütfen Kapatınız.\n");
+    } else if (fren_pedali == 0) {
+        printf("SONUÇ: BİLGİ: Güvenlik için frene basarak tekrar deneyin.\n");
+    } else {
+        printf("SONUÇ: BAŞARILI: SİSTEM HAZIR. MOTOR BAŞLATILIYOR...\n");
+    }
     return 0;
 }
